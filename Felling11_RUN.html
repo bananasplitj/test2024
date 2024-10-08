@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <title>On Human Desires</title>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Dosis:wght@200..800&family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Dosis:wght@200..800&family=Homemade+Apple&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Dosis:wght@200..800&family=Homemade+Apple&family=Permanent+Marker&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400&family=Dancing+Script:wght@700&family=Edu+Australia+VIC+WA+NT+Hand+Dots:wght@400&family=Indie+Flower&family=Lobster&family=Permanent+Marker&family=Anton&family=Unkempt&display=swap');
+
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            width: 100%;
+            min-height: 100vh;
+            padding: 30px;
+            box-sizing: border-box;
+            gap: 30px;
+        }
+        .pillar {
+            flex-grow: 1;
+            flex-basis: 300px;
+            max-width: 230px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow-y: auto;
+            transition: font-family 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+        }
+       .pillar h2:hover {
+            color: #FFD700;
+            transform: translateY(5px);
+        }
+       .confusion p:hover {
+            color: #A0E7E5;
+            transform: translateY(5px);
+        }
+        .euphoria h2 {
+            font-family: 'Edu Australia VIC WA NT Hand Dots', cursive;
+        }
+        .euphoria p, .euphoria h4 {
+            font-family: 'Edu Australia VIC WA NT Hand Dots', cursive;
+        }
+        .pleasure h2 {
+            font-family: 'Unkempt', cursive;
+        }
+        .pleasure p, .pleasure h4, .pleasure ul {
+            font-family: 'Unkempt', cursive;
+        }
+        .determination h2 {
+            font-family: 'Chakra Petch', sans-serif;
+        }
+        .determination p, .determination h3, h4, h5 {
+            font-family: 'Aladin', sans-serif ;
+        }
+        .confusion h2 {
+            font-family: 'Permanent Marker', cursive;
+        }
+        .confusion p, .confusion ul {
+            font-family: 'Homemade Apple', cursive;
+        }
+        .euphoria {
+            background-color: #D62E55;
+            transition: transform 0.5s ease;
+        }
+        .euphoria:hover {
+            animation: tilt-shaking 2s infinite;
+            font-size: 32px;
+        }
+
+        @keyframes tilt-shaking {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .pleasure {
+            background-color: #6f9fd8;
+            transition: transform 0.5s ease;
+            position: relative;
+        }
+
+        .pleasure:hover {
+            animation: heartbeat 2s infinite;
+            font-size: 32px;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes run-away {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(500px); }
+            100% { transform: translateX(0); }
+        }
+
+        input[type="radio"]:checked + .pleasure {
+            animation: run-away 2s ease-in-out;
+        }
+
+        .run-label {
+            font-family: 'Impact', sans-serif;
+            font-size: 24px;
+            color: #ff0000;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+
+        .determination {
+            background-color: #bada55;
+            transition: transform 0.5s ease;
+        }
+
+        .determination:hover {
+            animation: vertical-shaking 2s infinite;
+            font-size: 32px;
+        }
+
+        @keyframes vertical-shaking {
+            0% { transform: translateY(0); }
+            25% { transform: translateY(40px); }
+            50% { transform: translateY(-25px); }
+            75% { transform: translateY(40px); }
+            100% { transform: translateY(0); }
+        }
+
+        .confusion {
+            background-color: #c678dd;
+            transition: transform 0.5s ease;
+        }
+
+        .confusion:hover {
+            animation: skew-x-shaking 2s infinite;
+            font-size: 32px;
+        }
+
+        @keyframes skew-x-shaking {
+            0% { transform: skewX(-15deg); }
+            5% { transform: skewX(15deg); }
+            10% { transform: skewX(-15deg); }
+            15% { transform: skewX(15deg); }
+            20% { transform: skewX(0deg); }
+            100% { transform: skewX(0deg); }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            text-align: center;
+        }
+
+        h1, h2, h3, h4, h5, p, ul {
+            font-size: 18px; 
+            line-height: 1.8; 
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+         p {
+            font-size: 13px;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="euphoria" class="pillar euphoria">
+            <h2>Euphoria</h2>
+            <h4>In Love With Liberty</h4>
+            <h4>The world <strong>Tailor-Made</strong> for Their Freedom</h4>
+            <p>They were in love with liberty. It seemed to them that the whole world was tailor-made for them.</p>
+            <p>They lived at the exact tempo of their thirst, and their exuberance was irrepressible; their enthusiasm knew no bounds.</p>
+        </div>
+
+        <input type="radio" id="run-radio" />
+        <div id="pleasure" class="pillar pleasure">
+            <h2>Pleasure</h2>
+            <h4>All night.</h4>
+            <h4>They could have ...</h4>
+            <ul>
+                <li><em>Walked</em></li>
+                <li><label for="run-radio" class="run-label"><em>Run</em></label></li>
+                <li><em>Danced</em></li>
+                <li><em>Sung</em></li>
+            </ul>
+            <p>They would venture out only once night had fallen, to go and eat a plain steak in an expensive café.</p>
+        </div>
+
+        <div id="determination" class="pillar determination">
+            <h2>Determination</h2>
+          <h3><strong>They wouldn't meet the day after.</strong></h3>
+          <h5>The couples would</h5>
+          <h5>stay at home, dieting, feeling queasy,</h5> 
+          <h5>overindulging in black coffee and soluble aspirin.</h5>
+            <p><em>They would make draconian resolutions: no more smoking, no more drinking, no more wasting money.</em></p>
+        </div>
+
+        <div id="confusion" class="pillar confusion">
+            <h2>Confusion</h2>
+              <p>They would feel <strong>empty and stupid</strong>, and in their memory of their magnificent drinking bout there would always be a:</p>
+            <ul>
+                <li><em><strong>hint of yearning,</strong></em></li>
+                <li><em><strong>a vague annoyance,</strong></em></li>
+                <li><em><strong>a feeling of ambiguity,</strong></em></li>
+            </ul>
+            <p>As if the very impulse which had made them drink had only reawakened in them a much deeper perplexity.</p>
+        </div>
+    </div>
+
+</body>
+</html>
